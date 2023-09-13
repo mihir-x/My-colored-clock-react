@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
-const Time = () => {
+const Time = ({selectedColor}) => {
     //get the time
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString())
     useEffect(() =>{
@@ -10,9 +11,11 @@ const Time = () => {
     },[])
     return (
         <div>
-            <h1 className="text-4xl font-semibold">{currentTime}</h1>
+            <h1 className="text-4xl font-semibold" style={{color: selectedColor}} >{currentTime}</h1>
         </div>
     );
 };
-
+Time.propTypes = {
+    selectedColor: PropTypes.string.isRequired
+}
 export default Time;

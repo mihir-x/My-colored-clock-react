@@ -11,7 +11,7 @@ const Time = ({selectedColor}) => {
     },[])
     return (
         <div>
-            <h1 className="text-4xl font-semibold" style={{color: selectedColor}} >{currentTime}</h1>
+            <h1 className=" text-4xl font-semibold" style={{color: selectedColor}} >{currentTime}</h1>
         </div>
     );
 };

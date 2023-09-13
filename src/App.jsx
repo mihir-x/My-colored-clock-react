@@ -6,7 +6,9 @@ function App() {
 
   return (
     <>
-      <Time></Time>
+      <div className='flex flex-col h-screen justify-center items-center'>
+          <Time></Time>
+      </div>
     </>
   )
 }
